@@ -57,6 +57,29 @@ console.log({ squadreCalcio });
  * che hanno la posizione compresa tra i due numeri.
  */
 
+const array = ['pippo0', 'pippo1', 'pippo2', 'pippo3', 'pippo4', 'pippo5', 'pippo6', 'pippo7', 'pippo8', 'pippo9',];
+
+const min = parseInt(prompt('Inserire numero minimo: '));
+const max = parseInt(prompt('Inserire numero massimo: '));
+
+const newArray = snackDue(array, min, max);
+
+console.log(newArray);
+
+function snackDue(array, min, max) {
+
+    const newArray = [];
+
+    for (let index = min + 1; index < max; index++) {
+        const element = array[index];
+        newArray.push(element);
+    }
+
+    // Il nuovo array è composto dai valori dell'array con indice compreso tra a e b
+    return newArray;
+
+}
+
 
 
 /* SNACK 3*/
