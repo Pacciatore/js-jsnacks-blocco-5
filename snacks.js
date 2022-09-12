@@ -88,3 +88,79 @@ function snackDue(array, min, max) {
  * Dividi in due array separati le zucchine che misurano meno o più di 15cm.
  * Infine stampa separatamente quanto pesano i due gruppi di zucchine.
  */
+
+
+
+const zucchine = [
+    {
+        peso: 55,
+        lunghezza: 20,
+    },
+
+    {
+        peso: 5,
+        lunghezza: 2,
+    },
+
+    {
+        peso: 10,
+        lunghezza: 11,
+    },
+
+    {
+        peso: 25,
+        lunghezza: 16,
+    },
+
+    {
+        peso: 33,
+        lunghezza: 33,
+    },
+
+    {
+        peso: 43,
+        lunghezza: 24,
+    },
+
+    {
+        peso: 10,
+        lunghezza: 8,
+    },
+
+    {
+        peso: 13,
+        lunghezza: 15,
+    },
+
+    {
+        peso: 22,
+        lunghezza: 6,
+    },
+
+    {
+        peso: 3,
+        lunghezza: 5,
+    },
+
+];
+console.log(zucchine);
+
+
+const zucchineCorte = [];
+const zucchineLunghe = [];
+
+let pesoCorte = 0;
+let pesoLunghe = 0;
+
+zucchine.forEach(zucchina => {
+    if (zucchina.lunghezza >= 15) {
+        zucchineLunghe.push(zucchina);
+        pesoLunghe += pesoLunghe + zucchina.peso;
+    } else {
+        zucchineCorte.push(zucchina);
+        pesoCorte += pesoCorte + zucchina.peso;
+    }
+});
+
+console.log(`Peso totale zucchine corte: ${pesoCorte} kg
+Peso totale zucchine lunghe: ${pesoLunghe} kg`);
