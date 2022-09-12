@@ -8,6 +8,47 @@
 */
 
 
+const squadreCalcio = [
+    {
+        nome: 'Milan',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: 'Inter',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: 'Bari',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: 'Juventus',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: 'Roma',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: 'Lazio',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    }
+];
+
+squadreCalcio.forEach(squadra => {
+    squadra.puntiFatti = Math.floor(Math.random() * 20) + 1;
+    squadra.falliSubiti = Math.floor(Math.random() * 40) + 1;
+});
+
+console.log({ squadreCalcio });
+
+
 /* SNACK 2*/
 /*
  * Si scriva una funzione che accetti tre argomenti, 
